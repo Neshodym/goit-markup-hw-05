@@ -87,9 +87,9 @@ section {
   list-style: none;
 }
 .nav-link {
+  position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
-  margin-bottom: -1;
   color: var(--main-color-text);
   font-weight: 500;
   font-size: 14px;
@@ -98,7 +98,7 @@ section {
   text-decoration: none;
 }
 
-.nav-link.curent:hover::after {
+.curent:hover::after {
   content: "";
   position: absolute;
   display: block;
@@ -106,8 +106,8 @@ section {
   bottom: 0;
   width: 100%;
   height: 4px;
-  background-color: var(--cursor);
   border-radius: 2px;
+  background-color: var(--cursor);
 }
 
 .nav-list {
@@ -550,10 +550,12 @@ section {
   flex-wrap: wrap;
   gap: 30px;
 }
-.project li:hover {
+.project li:hover,
+.project li:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 .card-desk {
   padding: 20px 24px;
   border-bottom: 1px solid #f1f0ee;
@@ -650,6 +652,9 @@ section {
 .pikchers-pic {
   position: relative;
   overflow: hidden;
+}
+.pikchers {
+  text-decoration: none;
 }
 .text-hover {
   opacity: 0;
